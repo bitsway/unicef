@@ -1,0 +1,1539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>unicef</title>
+    <link rel="stylesheet" href="static/c.min.css" />
+    <link rel="stylesheet" href="static/jquery.mobile-1.4.0.min.css" /> 
+   
+    <script src="static/jquery-1.10.2.min.js">   </script>
+    <script src="static/jquery.mobile-1.4.0.min.js">   </script>		
+    
+	<script src="static/unicef.js">   </script>
+	
+	<script>
+		$(document).ready(function(){
+				
+				
+							
+				
+		});
+	
+		function syncPage(){
+			$(".errorChk").text("");
+			$.mobile.navigate("#pagesync")
+			};		
+		
+	
+	
+	
+	
+	</script>
+	       
+    <style>	
+        .reqField{ color:#FF0000;}
+        .errorChk{ color:#FF0000; text-shadow:none;}
+		.errorMsg{ color:#FF0000; text-shadow:none;}
+    	.auto_break{
+			word-wrap:break-word!important;
+			white-space:normal!important;
+		}
+		
+		.tbl_bro_color{border:1px solid #B8DCDC;}
+    </style>	
+</head>
+
+<body >
+
+
+<!-- MAIN MENU ----------------------------------------------------------------------------- -->
+<div data-theme="c" data-role="page" id="homePage" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" href="#leftpanel" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets" ><img src="menu.png" /></a>
+        
+        <a data-role="button" onClick="exit();" ><img src="exit.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+    <div data-role="content">
+    
+            <div class="errorChk"></div>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#" onClick="pmthhVerification();" data-transition="slide">সাপোটিভ সুপারভিশন <br />(সহায়তামুলক তত্ত্বাবধায়ন রিপোর্ট)</a></li>
+            </ul>
+    </div>
+    
+    <div data-theme="c" data-role="footer" data-position="fixed" style="font-size:12px;background-color:#CCC;" align="center" >m-Reporting 20161020</div><!------/footer 20150401-20150309 -->
+    
+    <div data-role="panel" id="leftpanel" data-position="left" data-display="overlay" data-theme="c">
+        <div align="center"></div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <ul data-role="listview" >
+          <li><a data-role="button" class="ui-btn" onclick="syncPage();"><center><img src="sync.png" /></center></a></li>		  
+        </ul>
+        <br/>
+        <br/>
+        <br/>
+        <div align="center"><img src="logo_gp.png" /></div>
+    </div>
+</div>
+
+
+
+<!-- ------------------- sync page---------------------------------------------------------------------------------------- -->
+<!--<div data-theme="c" data-role="page" id="pagesync" >
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <h3>Sync</h3>
+    </div>
+    <div data-role="content">
+        <div class="errorMsg"></div>
+        <ul data-role="listview" data-inset="true" data-theme="c">
+            <li class="ui-field-contain">
+                <label for="mobile"> Mobile No</label>
+                <input name="mobile" id="mobile" placeholder="" value="" type="number">
+            </li>
+            <li class="ui-field-contain">
+                <label for="password">Password </label>
+                <input type="password" name="password" id="password" placeholder="" value="" >
+            </li>
+        </ul>
+        <a data-role="button" href="#" id="syncBasic" onclick="syncBasic()"  data-theme="c" data-transition="slide" >Sync</a>
+		<div id="#syncData"></div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+</div>-->
+
+
+<!-- --------------------banbeis page1------------------------------------------------- -->
+<div data-role="page" data-theme="c" id="page1" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+    
+    <div data-role="content" >
+             
+            <ul data-role="listview" data-inset="true">
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong></strong> </li>
+              	 <li class="ui-field-contain">
+                    <label for="healthCenterName">স্বাস্থ্যকেন্দ্রের নাম:</label>               
+                    	<input type="text" name="healthCenterName" id="healthCenterName" />
+                </li>
+               <li class="ui-field-contain">
+                    <label for="office">দপ্তর:</label>               
+                    	<input type="text" name="office" id="office" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="helathWorkerName">স্বাস্থ্যকর্মীর নাম:</label>               
+                    	<input type="text" name="helathWorkerName" id="helathWorkerName" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="helathWorkerDeg">স্বাস্থ্যকর্মীর পদবি:</label>               
+                    	<input type="text" name="helathWorkerDeg" id="helathWorkerDeg" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="healthWorkerPhoneNo">স্বাস্থ্যকর্মীর মোবাইল ন‍ং:</label>               
+                    	<input type="text" name="healthWorkerPhoneNo" id="healthWorkerPhoneNo" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="unionWord">ইউনিয়ন/ওয়ার্ড:</label>               
+                    	<input type="text" name="unionWord" id="unionWord" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="upzilaZone">উপজেলা/জোন:</label>               
+                    	<input type="text" name="upzilaZone" id="upzilaZone" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="districtCityCor">জেলা/সিটি কর্পোররেশন:</label>               
+                    	<input type="text" name="districtCityCor" id="districtCityCor" />
+                </li>
+                
+                
+                
+                <li class="ui-field-contain">
+                    <label for="supName">সুপারভাইজারের নাম:</label>               
+                    	<input type="text" name="supName" id="supName" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="supWorkGround">সুপারভাইজারের কর্মস্হল:</label>               
+                    	<input type="text" name="supWorkGround" id="supWorkGround" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="supStyle">সুপারভাইজারের ধরন:</label>               
+                    	<input type="text" name="supStyle" id="supStyle" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="supDeg">সুপারভাইজারের পদবি:</label>               
+                    	<input type="text" name="supDeg" id="supDeg" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="supPhoneNo">সুপারভাইজারের মোবাইল নং:</label>               
+                    	<input type="text" name="supPhoneNo" id="supPhoneNo" />
+                </li>
+                <li class="ui-field-contain">
+                    <label for="visitDate">পরিদর্শনের তারিখ:</label>               
+                    	<input type="date" name="visitDate" id="visitDate" />
+                </li>
+                
+              </ul>
+                 
+  <a data-role="button" onclick="secondPage()" href="#" data-transition="slide" >Next</a>
+        <div class="errorChk"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+</div>
+                
+                 
+
+
+<!-- --------------------banbeis page2------------------------------------------------- -->
+<div data-role="page" data-theme="c" id="page2" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+
+    <div data-role="content" >
+            <ul data-role="listview" data-inset="true">
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong></strong></li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">দক্ষতা ১: শিশুর বয়স বের করা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1" selected="selected">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>  
+                 
+               <li><strong>দক্ষতা ২: ধাপ ১-শিশুর খাবার যাচাই করা </strong></li> 
+              
+              <li class="ui-field-contain auto_break">	
+                <label for="q2_a">বর্তমানে মায়ের দুধ দেয়ার অবস্হা যাচাই করেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+               </li>
+              
+              <li class="ui-field-contain auto_break">
+                <label for="q3_a">মায়ের দুধ খাওয়ানো সম্পকিত সমস্যা সমূহ পরীক্ষা করেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+                </li>
+              
+              <li class="ui-field-contain auto_break">
+                <label for="q4_a">মায়ের দুধ দেওয়া পর্যবেক্ষন (যদি প্রয়োজন হয়) করেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+                </li>
+              
+              <li class="ui-field-contain auto_break" id="q5_a_hide">
+                <label for="q5_a">শিশুর দুধের বোতল ব্যবহার যাচাই করেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+                </li>
+              
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">‘অন্যান্য খাবার’ এবং ‘অন্যান্য পানীয়’ গ্রহনের পরিমাপ য়াচাই করেছেন কিনা</label>
+                    <select name="" id="" data-native-menu="false" >
+                      <option value="1" selected="selected">হ্যাঁ </option>
+                      <option value="2">না</option>				
+                    </select>
+                </li>
+              
+              <li class="ui-field-contain auto_break">
+                <label for="q7_a">বাড়তি খাবার যাচাই: বয়স অনুসারে উপযুক্ত সুপারিশে বৃত্ত অঙ্কন করেছেন কিনা</label>
+                	<select name="" id="" data-native-menu="false" >
+                      <option value="1" selected="selected">হ্যাঁ </option>
+                      <option value="2">না</option>				
+                    </select>
+                </li>
+              
+              <li class="ui-field-contain auto_break">
+                <label for="q8_a">ব্যাখ্যা বা কাজ শুরু করার আগে যাচাই শেষ করেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+                </li>
+              
+              <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৩: ধাপ ২-বিশ্লেষণ</strong></li>     
+              
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">বয়স-উপযুক্ত সুপারিশকৃত অভ্যাস সমূহের ব্যাত্যয়কে বিবেচনায় রেখেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+                </li>
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">মায়ের জানানো বিষয় সমূহ বিবেচনায় রেখেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+                </li>
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">কাজ করার জন্যে সবচেয়ে গুরুত্বপূর্ন বিষয় গুলোকে অগ্রাধিকারের ভিত্তিতে সামনের দিকে রেখেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+                </li>
+              
+              <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৪: ধাপ ৩-কাজ</strong></li>   
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">ইতিবাচক অনুশীলনের জন্য মা/বাবা/লালন-পালন কারীর প্রশংসা করেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>				
+                  </select>
+                </li>
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">সমস্যা থাকলে কারণগুলো উল্লেখ করেছেন কিনা </label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>					
+                  </select>
+                </li>
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">সীমিত ও প্রাসঙ্গিক তথ্য আলোচনা করেছেন কিনা </label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>					
+                  </select>
+                </li>
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">মায়ের সমস্যা- সমাধান যথাযথ ভাবে সহায়তা প্রদান করেছেন কিনা </label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>					
+                  </select>
+                </li>
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">মা/লালন-পালনকারীকে নতুন অভ্যাস চেষ্টা করে দেখতে উৎসাহিত করেছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>					
+                  </select>
+                </li>
+              <li class="ui-field-contain auto_break">
+                <label for="q6_a">কাজের বিষয়ে সম্মত হয়েছেন কিনা</label>
+                <select name="" id="" data-native-menu="false" >
+                  <option value="1" selected="selected">হ্যাঁ </option>
+                  <option value="2">না</option>					
+                  </select>
+                </li>
+              
+            </ul>
+            
+            <a data-role="button" onclick="thirdPage()"  href="#" data-transition="slide" >Next</a>
+      <div class="errorChk"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+    
+    <!--<div data-theme="c" data-role="footer" data-position="fixed" style="font-size:12px;background-color:#CCC;" align="center" >m-Reporting</div>-->
+
+</div>
+
+
+<div data-role="page" data-theme="c" id="page3" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+
+    <div data-role="content" >
+            <ul data-role="listview" data-inset="true">
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৫: উপাদানসমূহের যথাযথ ব্যবহার</strong></li>   
+                <li class="ui-field-contain auto_break">
+                    <label for="">সঠিক নিয়মে দুধ খাওয়ানোর অভ্যাসকে জোরদার করতে কাউন্সেলিং কার্ডের ব্যবহার করেছেন কিনা </label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">বিভিন্ন বয়সী দলর জন্যে উপযুক্ত কাউন্সেলিং কার্ডের ব্যবহার করে বাড়তি খাবার এর বৈশিষ্ট্যসমূহ চিহ্নিত করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">পরিচ্ছন্নতা রক্ষার সঠিক অনুশীলনকে করতে কাউন্সেলিং কার্ডের ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+                  
+                <li class="ui-field-contain auto_break">
+                    <label for="">কি করে বাড়তি তৈরি খাবারে অনুপুষ্টি যোগ করতে হয় তা প্রদর্শন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>			
+                        </select>
+                 </li>
+                 
+           		<li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৬: যোগাযোগ দক্ষতাসমূহ</strong></li>
+                <li class="ui-field-contain auto_break">
+                    <label for="">কথা না বলে যোগাযোগের উপায় ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>						 												
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">এমন প্রশ্ন করেছেন কিনা যেগুলো বিস্তারিত তথ্য সংগ্রহে সাহয্য করবে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>						 												
+                        </select>
+                 </li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">মা/বাবা/লালন-পালনকারী যা ভাবেন ও অনুভব করেন তা গ্রহন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+             
+                <li class="ui-field-contain auto_break">
+                    <label for="">হাতে কলমে সহায়তা প্রদান করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>সাপোর্টিভ সুপারভিশন পদ্ধতি ৩ খ: GMP বিষয়ে সাপোর্টিভ সুপারভিশন/মেনটরিং চেকলিস্ট</strong></li>
+                
+                <li class="ui-field-contain auto_break">
+                    <label for="">সাম্প্রতিক অসুস্হতার বিষয়ে জেনেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ওজন পরিমাপ: ডিজিটাল স্কেল/ওজন মাপার যন্থ ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">স্কেলটি সোজা রেখেছেন কিনা, সমান ও শক্ত জায়গায় স্কেলটি স্হাপন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">যে পর্যন্ত স্কেলটি ০.০ পরিমাপ প্রদর্শণ না করে সে পর্যন্ত সেটি খোলা/বা এক আঙ্গুলে স্পর্শ করে রেখেছেন কিনা </label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মাকে তার শিশুর পোষাক খুলে দিতে বলেছেন কিনা; তার স্যান্ডেল খুলতে বলেছেন কিনা; এরপর তিনি ওজন মাপার জন্যে যন্ত্রটির উপর দাঁড়াতে বলেছেন কিনা
+(মায়ের ওজন ৫ সেকেন্ডের মধ্যে যন্ত্রে দেখা যাবে) </label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">খালি-গা শিশুটিকে এবার মায়ের হাতে দিয়েছেন কিনা (কয়েক সেকেন্ডের মধ্যে যন্ত্রে মায়ের ও শিশুর ওজন দেখা যাবে)</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মাকে স্কেলটি থেকে নেমে শিশুটিকে পোষাক পড়াতে বলেছেন কিনা।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুর ওজন পেতে মা ও শিশুর ওজন থেকে মায়ের ওজন বিয়োগ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুটি যদি নিজে নিজে দাঁড়াতে পারে, তবে তার জামা-কাপড় খুলে সরাসরি যন্ত্রটির উপর দাঁড় করিয়ে তার ওজন নিয়েছেন কিনা।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ওজন পরিমাপ : সলটার স্কেল (যাতে গামলা বা প্যান্ট যুক্ত থাকে) ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ওজন পরিমাপের আগে লক্ষ করেছেন এবং নিশ্চিত হয়েছেন কিনা যে, যন্ত্রের মাপটি ``0’’ অবস্থানে আছে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">পরীক্ষা করে নিয়েছেন কিনা যে, গামলাটি পরিষ্কার আছে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">পরীক্ষা করে নিয়েছেন কিনা যে, গামলাটি মাটির কাছাকাছি ঝুলে আছে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুটিকে নিরাপদ রাখতে গামলার মধ্যে একটি কাপড় ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুটিকে কাপড় খুলে বা হাল্কা কাপড়ে জড়িয়ে গামলার ভেতরে শুইয়ে দিয়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুটি যখন স্কেলে শুয়ে আছে তখন তার ওজন লিখে রেখেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">যতক্ষণ পর্যনত্ম ওজন লেখা না হয় ততক্ষন পর্যনত্ম অপেক্ষা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">১০০ গ্রামের কাছাকাছি মাপে ওজন লিপিবদ্ধ করেছেন কিনা; দ্রুত  কাজটি সেরেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">উষ্ণ রাখতে দ্রুত শিশুটিকে কাপড়ে জড়িয়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+            </ul>
+            
+            <a data-role="button" onclick="fourPage()" href="#" data-transition="slide" >Next</a>
+            <div class="errorChk"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+    
+</div>
+
+
+
+
+<!--==-->
+<div data-role="page" data-theme="c" id="page4" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+
+    <div data-role="content" >
+            <ul data-role="listview" data-inset="true">
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>দৈর্ঘ পরিমাপ: দৈর্ঘ পরিমাপ  করেছেন কিনা (২ বছরের নিচের শিশুর জন্যে)</strong></li>   
+                <li class="ui-field-contain auto_break">
+                    <label for="">পরিমাপের বোর্ডটি মাটিতে স্হাপন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">স্বাস্হ্য কর্মী/পরিমাপকারী ব্যক্তি কোমল ভাবে যথাযথরূপে শিশুটিকে চিত হয়ে,মাথা পারিমাপ বোর্ডের উপরের দিক স্পর্শ করে শুয়ে পড়তে সাহায্য করেছেন কিনা।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">পরিমাপকারী ব্যক্তি শিশুর ডান দিকে বসা, এবং বাম হাত দিয়ে শিশুটির হাঁটু ও ডান হাত দিয়ে পা আলতোভাবে ঠেঁস দিয়ে রাখা যাতে দু পায়ের পাতা ‘V’ আকৃতি ধারন করে - ইত্যাদি কাজগুলো করেছেন কিনা। পায়ের পাতা পা রাখার স্থানে সমান ভাবে থাকবে, বৃদ্ধাঙ্গুল সমকোনে উপরের দিকে সোজা হয়ে থাকবে।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+                  
+                <li class="ui-field-contain auto_break">
+                    <label for="">সহায়তাকারী ব্যক্তি কোমলভাবে শিশুটির মুখের দু পাশে দু হাত দিয়ে ধরে রেখেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>			
+                        </select>
+                 </li>
+                <li class="ui-field-contain auto_break">
+                    <label for="">সহায়তাকারী ব্যক্তি কোমলভাবে তার ডান হাত ব্যবহার করে শিশুটির দু পা সমান রেখে একটি হাত শিশুর উরুতে রেখেছেন কিনা যেন সে নড়াচড়া করতে না পারে।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>						 												
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">প্রাপ্ত দৈর্ঘ্যটি উচ্চস্বরে পড়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>						 												
+                        </select>
+                 </li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">০.১ সে.মি. এর কাছাকাছি সংখ্যায় দৈর্ঘ্য পরিমাপ করে তা লিখে রেখেছেন কিনা </label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                             
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>উচ্চতা পরিমাপ: উচ্চতা পরিমাপ করেছেন কিনা (২ থেকে ৫ বছরের জন্যে)</strong></li>
+                
+                <li class="ui-field-contain auto_break">
+                    <label for="">উচ্চতা পরিমাপের বোর্ডটি উলম্ব ভাবে সমান ও শক্ত ভূমিতে স্হাপন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুর পায়ের জুতা/স্যান্ডেল এবং মাথার টুপি খুলে দিতে মা/লালন-পালনকারীকে অনুরোধ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুকে বোর্ডের মাঝামাঝি দাঁড় করাতে সাহায্য করার জন্যে মা/লালনপালনকারীকে অনুরোধ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">সহায়তাকারী শিশুর হাঁটু ও পা সমান ও সোজা করে ধরে রেখেছেন কিনা </label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">পরিমাপকারী ব্যক্তি শিশুর বাম দিকে আছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">নিশ্চিত করেছেন কিনা যে, শিশুর মাথার পেছনের ভাগ, কাঁধ, পেছন, হাঁটু এবং গোড়ালি যেন বোর্ডের সঙ্গে লাগানো থাকে; পা যেন সোজা এবং হাত দু’টি যেন দু’পাশে স্বাভাবিক ভাবে ঝুলে থাকে।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা/লালন-পালনকারীকে শিশুর সামনে বসতে অনুরোধ করেছেন কিনা এবং শিশুকে মা/লালন-পালনকারীর দিকে সোজাসুজি ভাবে তাকাতে বলেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশু যে সোজা হয়ে দাঁড়িয়েছে তা নিশ্চিত করতে তার পেটে একটু চাপ দিয়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ডান হাত ব্যবহার করে কাঠের টুকরাটি ধীরে ধীরে শিশুটির মাথা পর্যন্ত টেনে এনে,তারপর কাঠ বরাবর সংযুক্ত টেপের সংখ্যাটি লক্ষ্য করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">প্রাপ্ত উচ্চতা উচ্চস্বরে পড়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">০.১ সেমি এর কাছাকাছি সংখ্যাটি সংখ্যাটি সঠিক ভাবে লিপিবদ্ধ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+               <li style="background-color:#F2F2F2;" class="auto_break"><strong>উচ্চতা পরিমাপ: উচ্চতা পরিমাপ করেছেন কিনা (২ থেকে ৫ বছরের জন্যে)</strong></li>  
+                 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">উচ্চতা পরিমাপের বোর্ডটি উলম্ব ভাবে সমান ও শক্ত ভূমিতে স্হাপন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুর পায়ের জুতা/স্যান্ডেল এবং মাথার টুপি খুলে দিতে মা/লালন-পালনকারীকে অনুরোধ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুকে বোর্ডের মাঝামাঝি দাঁড় করাতে সাহায্য করার জন্যে মা/লালনপালনকারীকে অনুরোধ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">সহায়তাকারী শিশুর হাঁটু ও পা সমান ও সোজা করে ধরে রেখেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">পরিমাপকারী ব্যক্তি শিশুর বাম দিকে আছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">নিশ্চিত করেছেন কিনা যে, শিশুর মাথার পেছনের ভাগ, কাঁধ, পেছন, হাঁটু এবং গোড়ালি যেন বোর্ডের সঙ্গে লাগানো থাকে; পা যেন সোজা এবং হাত দু’টি যেন দু’পাশে স্বাভাবিক ভাবে ঝুলে থাকে।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা/লালন-পালনকারীকে শিশুর সামনে বসতে অনুরোধ করেছেন কিনা এবং শিশুকে মা/লালন-পালনকারীর দিকে সোজাসুজি ভাবে তাকাতে বলেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশু যে সোজা হয়ে দাঁড়িয়েছে তা নিশ্চিত করতে তার পেটে একটু চাপ দিয়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ডান হাত ব্যবহার করে কাঠের টুকরাটি ধীরে ধীরে শিশুটির মাথা পর্যন্ত টেনে এনে,তারপর কাঠ বরাবর সংযুক্ত টেপের সংখ্যাটি লক্ষ্য করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                <li class="ui-field-contain auto_break">
+                    <label for="">প্রাপ্ত উচ্চতা উচ্চস্বরে পড়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">০.১ সেমি এর কাছাকাছি সংখ্যাটি সংখ্যাটি সঠিক ভাবে লিপিবদ্ধ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+            </ul>
+            
+            <a data-role="button" onclick="fivePage()" href="#" data-transition="slide" >Next</a>
+            <div class="errorChk"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+    
+</div>
+
+
+
+<div data-role="page" data-theme="c" id="page5" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+
+    <div data-role="content" >
+            <ul data-role="listview" data-inset="true">
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>মুয়াক পরিমাপ: মুয়াক পরিমাপ করেছেন কিনা</strong></li>   
+                <li class="ui-field-contain auto_break">
+                    <label for="">মুয়াক পরিমাপের জন্যে শিশুর বাম হাতটি নির্বাচন করেছেন কিনা এবং বাম হাতের কাপড় সরিয়ে ফেলেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">উপরের বাহুর মধ্যভাগের মাপ নিয়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">শিশুর হাতটি সোজা ভাবে নিচে ঝুলিয়ে দিয়ে, টেপের তীরটি শিশুর উপরের বাহুর মধ্যভাগের উপর স্থির করে, টেপের ফিতাটি হাতের চারিদিকে ঘুরিয়ে এনে, টেপের মাথাটি টেপের শেষভাগে থাকা ছিদ্রে প্রবেশ করিয়ে দিয়ে নিশ্চিত হয়েছেন কিনা যে, মুয়াক টেপ শিশুর হাতের চামড়া স্পর্শ করছে।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+                  
+                <li class="ui-field-contain auto_break">
+                    <label for="">নিশ্চিত হয়েছেন কিনা যে, শিশুটি সোজা হয়ে দাঁড়িয়েছে এবং মাথা সোজা রেখে সামনের দিকে সোজাসুজি তাকিয়ে আছে। মুয়াক টেপকে অবশ্যই হাতের চারিদিক স্পর্শ করে যথাযথ ভাবে ঘিরে থাকতে হবে, তা যেন খুব বেশি জোরে বা ঢিলা ভাবে না থাকে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>			
+                        </select>
+                 </li>
+                <li class="ui-field-contain auto_break">
+                    <label for="">শিশুকে সঠিক ভাবে দাঁড় করানোর এবং টেপটি সঠিক ভাবে হাতে পেঁচানোর পরে টেপে থাকা বড় ছিদ্র বরাবর তাকিয়েছেন কিনা যেন সংখ্যাটি সহজেই দেখা যায়</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>						 												
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">মাপটি দেখার সময় মাথা সোজা রেখে সোজাসুজি তাকিয়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>						 												
+                        </select>
+                 </li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">একাধিক সংখ্যা দেখতে পেলে যে সংখ্যাটি বেশি স্পষ্ট ভাবে দেখা যাচ্ছে সেটি চিহ্নিত করেছেন কিনা এবং সেই সংখ্যাটি জোরে উচ্চারণ করেছেন কিনা।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>                
+                <li class="ui-field-contain auto_break">
+                    <label for="">সহায়তাকারী সংখ্যাটি লিখে রেখেছেন কিনা এবং পরিমাপকারী ব্যক্তি মুয়াক পরিমাপ আবারও পরীক্ষা করে দেখেছেন কিনা।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ইডিমা পরিমাপ: ইডিমা পরিমাপ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ইডিমা চিহ্নিত করতে, দুই পায়ের পাতার উপরের ভাগে বৃদ্ধাঙ্গুলি ব্যবহার করে ৩ সেকেন্ড (১০০১, ১০০২ ও ১০০৩ গুনুন) ধরে চাপ দিয়েছেন কিনা । এবার খেয়াল করে দেখেছেন কিনা যে চাপ দেয়া স্থানে ছোট বা বড় গর্ত হয়ে ডেবে গেছে।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">যদি বাইলেটারাল ইডিমা চিহ্নিত হয়, তাহলে নিশ্চিত হতে ২য় কোন ব্যক্তিকে একই পরীক্ষা পুনরায় করার জন্যে অনুরোধ করেছেন কিনা ।</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শিশুর GMP কার্ডে পরিমাপগুলোর বিন্দু অঙ্কন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">পুষ্টি অবস্হা বিশ্লেষন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+               <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৩: ধাপ ৩- শিশুদের  খাওয়ানো যাচই </strong></li>  
+                 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">বর্তমানে মায়ের দুধ দেয়ার অবস্হা যাচাই করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মায়ের দুধ খাওয়ানো সম্পর্কিত সমস্যাসমূহ পরীক্ষা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মায়ের দুধ দেয়া পর্যবেক্ষণ (যদি প্রয়োজন হয়) করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">‘অন্যান্য খাবার’ এবং ‘অন্যান্য পানীয়’ গ্রহণের পরিমাপ যাচাই করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">বাড়তি খাবার যাচাইঃ বয়স অনুসারে উপযুক্ত সুপারিশে বৃত্ত অঙ্কন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">বিশেস্নষণ বা কাজ শুরু করার আগে পর্যালোচনা শেষ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">বয়স-উপযুক্ত সুপারিশকৃত অভ্যাসসমূহের ব্যাত্যয়কে বিবেচনায় রেখেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মায়ের জানানো বিষয়সমূহ বিবেচনায় রেখেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কাজ করার জন্যে সবচেয়ে গুরম্নত্বপূর্ণ বিষয়গুলোকে অগ্রাধিকারের ভিত্তিতে সামনের দিকে রেখেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+                 <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৫: ধাপ ৩ কাজ</strong></li>           
+                <li class="ui-field-contain auto_break">
+                    <label for="">ইতিবাচক অনুশীলনের জন্যে মা/বাবা/লালন-পালনকারীর প্রশংসা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">সমস্যা থাকলে কারণগুলো উল্লেখ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">সীমিত ও প্রাসঙ্গিক তথ্য আলোচনা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মায়ের সমস্যা-সমাধান যথাযথভাবে সহায়তা প্রদান করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা/লালন-পালনকারীকে নতুন অভ্যাস চেষ্টা করে দেখতে উৎসাহিত করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কাজের বিষয়ে সম্মত হয়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+            </ul>
+            
+            <a data-role="button" onclick="sixPage()" href="#" data-transition="slide" >Next</a>
+            <div class="errorChk"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+    
+</div>
+
+
+
+
+<div data-role="page" data-theme="c" id="page6" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+
+    <div data-role="content" >
+            <ul data-role="listview" data-inset="true">
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৬: উপাদান সমূহের যথাযথ ব্যবহার</strong></li>   
+                <li class="ui-field-contain auto_break">
+                    <label for="">সঠিক নিয়মে দুধ খাওয়ানোর অভ্যাসকে জোরদার করতে কাউন্সেলিং কার্ডের ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">বিভিন্ন বয়সী দলের জন্যে উপযুক্ত কাউন্সেলিং কার্ডর ব্যবহার করে বাড়তি খাবার এর বৈশিষ্ট্যসমূহ চিহ্নিত করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">পরিচ্ছন্নতা রক্ষার সঠিক অনুশীলনকে জোরদার করতে কাউন্সেলিং কার্ডের ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+                  
+                <li class="ui-field-contain auto_break">
+                    <label for="">কি করে বাড়িতে তৈরি খাবারে অনুপুষ্টি সম্পূরণ যোগ করতে হয় তা প্রদর্শণ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>			
+                        </select>
+                 </li>
+                 
+               <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৭: যোগাযোগ দক্ষতাসমূহ</strong></li>  
+                 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কথা না বলে যোগাযোগের উপায় ব্যবহার করেছেন কিনা </label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">এমন প্রশ্নব করেছেন কিনা যেগুলো বিস্তারিত তথ্য সংগ্রহে সাহায্য করবে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা/বাবা/লালন-পালনকারী যা ভাবেন ও অনুভব করেন তা গ্রহন করেছেন কিনা হাতে কলমে সহায়তা প্রদান করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+                  <li style="background-color:#F2F2F2;" class="auto_break"><strong>সাপোর্টিভ সুপারভিশন পদ্ধতি ৬ ক: কিশোরী ও মহিলাদের পুষ্টি বিষয়ে সাপোর্টিভ সুপারভিশন চেকলিস্ট</strong></li> 
+                  <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ১: ধাপ ১: যাচাই</strong></li> 
+                  <li style="background-color:#F2F2F2;" class="auto_break"><strong>ক. পুষ্টির অবস্হা </strong></li>                  
+                  
+                 <li class="ui-field-contain auto_break">
+                    <label for="">সাম্প্রতিক অসুস্হতার তথ্য যাচাই করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ওজন যাচাই করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">উচ্চতা যাচাই করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">বিএমআই (BMI) যাচাই করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                  </select>
+                 </li>
+                 <li style="background-color:#F2F2F2;" class="auto_break"><strong>খ. যদি কিশোরি হন </strong></li>             
+                 <li class="ui-field-contain auto_break">
+                    <label for="">খাদ্য বৈচিত্র্য যাচাই করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কাজ করার জন্যে সবচেয়ে গুরম্নত্বপূর্ণ বিষয়গুলোকে অগ্রাধিকারের ভিত্তিতে সামনের দিকে রেখেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>                            
+                <li class="ui-field-contain auto_break">
+                    <label for="">আয়রন ফলিক এসিড খাচ্ছে কিনা তা পরীক্ষা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+                 <li style="background-color:#F2F2F2;" class="auto_break"><strong>গ. যদি গর্ভবতী হন </strong></li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কতোটা ওজন বেড়েছে তার পরিমাপ যাচাই করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা প্রতিদিন একবেলা বেশী খাবার খাচ্ছে তা জিজ্ঞাসা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা আয়রন ও ফলিক এসিড (IFA) খাচ্ছেন তা জিজ্ঞাসা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা ক্যালসিয়াম সাপ্লিমেন্ট গ্রহন করেছেন তা জিজ্ঞাসা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li style="background-color:#F2F2F2;" class="auto_break"><strong>ঘ. যদি শিশুকে বুকের দুধ খাওয়ান</strong></li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">প্রতিদিন মা ২ বেলা বেশি খাবার খাচ্ছেন তা জিজ্ঞাসা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা আয়রন ও ফলিক এসিড (IFA) খাচ্ছেন তা জিজ্ঞাসা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+            </ul>
+            
+            <a data-role="button" onclick="sevenPage()" href="#" data-transition="slide" >Next</a>
+            <div class="errorChk"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+    
+</div>
+
+
+
+<div data-role="page" data-theme="c" id="page7" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+
+    <div data-role="content" >
+            <ul data-role="listview" data-inset="true">
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>ঙ. গতকাল কি খেয়েছেন- বিগত ২৪ ঘন্টা স্মরণ করুন :  মায়ের সকালে ঘুম থেকে ওঠার সময় থেকে শুরু করে রাতে ঘুমাতে যাওয়া পর্যন্ত</strong></li>   
+                <li class="ui-field-contain auto_break">
+                    <label for="">আমিষঃ মাছ, মাংস, কলিজা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">দুধ ও দুধ দিয়ে তৈরি খাবার</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">ডিম</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+                  
+                <li class="ui-field-contain auto_break">
+                    <label for="">বিভিন্ন সীম ও বাদাম জাতীয় খাবার (ডাল, মটরশুটি, ইত্যাদি)</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>			
+                        </select>
+                 </li>                 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">শস্যঃ ভাত, রুটি, চিড়া, </label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">গাঢ় লাল ও সবুজ শাক এবং হলুদ ও কমলা সবজিঃ ফল যেমন কুমড়া, গাজর,পাঁক পেঁপে, পাঁকা আম ইত্যাদি</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">অন্যান্য সবজি ও ফলঃ লাউ, ফুলকপি, কলা, পেয়ারা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">চিপস্‌</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মিষ্টি শরবত</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ইন্সট্যান্ট নুডুলস্‌</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">অন্যান্য খাবার</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                  </select>
+                 </li>            
+                 <li class="ui-field-contain auto_break">
+                    <label for="">অনুপুষ্টি সম্পূরণ</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+                 <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ২: ধাপ ২: বিশ্লেষন </strong></li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কিশোরী/মায়ের বলা বিষয়গুলি যা বিবেচনা করা হয়েছে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">যথাযথ অগ্রাধিকারের ভিত্তিতে করণীয় কাজগুলি সাজান</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+                 <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা  ৩: ধাপ ৩: কাজ</strong></li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কিশোরী/মায়ের ইতিবাচক অনুশীলন/অভ্যাসগুলির প্রশংসা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">সমস্যা থাকলে তার কারণগুলি উলেস্নখ করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">সীমিত ও প্রাসঙ্গিক তথ্য আলোচনা করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কিশোরী/মাকে সমস্যা সমাধানে যথাযথভাবে সাহায্য করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কিশোরী/মাকে নতুন বিষয় অভ্যাস/অনুশীলন করতে উৎসাহিত যথাযথ কাজের বিষষে একমত হয়েছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+                  <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৪: ধাপ ৪: উপাদান/জিনিসের যথাযথ ব্যবহার</strong></li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">সুঅভ্যাস গঠনে কাউন্সেলিং কার্ডের এর ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">পরিচ্ছন্নতার সুঅভ্যাস গঠনে কাউন্সেলিং কার্ডের এর ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li style="background-color:#F2F2F2;" class="auto_break"><strong>দক্ষতা ৫: যোগাযোগ দক্ষতা </strong></li>
+                 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">ইশারায় যোগাযোগের উপায় ব্যবহার করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">এমন প্রশ্ন করেছেন কিনা যেগুলি বিস্তারিত তথ্য সংগ্রহে সাহায্য করবে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">মা/বাবা/লালন-পালনকারীরা যা ভাবেন ও অনুভব করেন তা গ্রহন করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">বাস্তবসম্মত সহায়তা প্রদান করেছেন কিনা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+                 
+                 
+            </ul>
+            
+            <a data-role="button" onclick="eightPage()" href="#" data-transition="slide" >Next</a>
+            <div class="errorChk"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+    
+</div>
+
+
+
+<div data-role="page" data-theme="c" id="page8" style="overflow:scroll;">
+    <div data-theme="c" data-role="header" data-position="fixed" >
+        <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+    </div>
+
+    <div data-role="content" >
+            <ul data-role="listview" data-inset="true">
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>সাপোর্টিভ সুপারভিশন  পদ্ধতি ৭খ: সার্বিক মতামত ও সর্বসম্মত সুপারিশমালা </strong></li> 
+                <li style="background-color:#F2F2F2;" class="auto_break"><strong>ব্যক্তিগত কাউস্নেলিং</strong></li>   
+                <li class="ui-field-contain auto_break">
+                    <label for="">কাউন্সেলিং কার্ড ব্যবহার করা হয়েছে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                 </li>
+            
+                <li class="ui-field-contain auto_break">
+                    <label for="">কাউন্সেলিং এর ৩ টি ধাপের (যাচাই, বিশ্লেষণ, কাজ) প্রতিটি অনুসরন করা হয়েছে</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+               <li style="background-color:#F2F2F2;" class="auto_break"><strong>যোগাযোগ দক্ষতা</strong></li>
+               
+                <li class="ui-field-contain auto_break">
+                    <label for="">শোনা-শেখার দক্ষতা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>				
+                        </select>
+                </li>
+                  
+                <li class="ui-field-contain auto_break">
+                    <label for="">আস্থা তৈরীর দক্ষতা</label>
+                        <select name="" id="" data-native-menu="false" >
+                            <option value="1">হ্যাঁ </option>
+                            <option value="2">না</option>			
+                        </select>
+                 </li>                 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">IYCF বিষয়ক সর্বসম্মত সুপারিশমালা*</label>
+                        <input type="text" id="" name="" />
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">GMP বিষয়ক সর্বসম্মত সুপারিশমালা*</label>
+                        <input type="text" id="" name="" />
+                 </li> 
+                 <li class="ui-field-contain auto_break">
+                    <label for="">কিশোরী ও মহিলাদের পুষ্টি বিষয়ক সর্বসম্মত সুপারিশমালা*</label>
+                         <input type="text" id="" name="" />
+                 </li>
+                 <li class="ui-field-contain auto_break">
+                    <label for="">পরবর্তী ভিজিটের পূর্বে করণীয় সম্পর্কে সর্বসম্মত নিদেশনা*</label>
+                        <input type="text" id="" name="" />
+                 </li>
+                                 
+            </ul>
+            
+            <a data-role="button" onclick="ninePage()" href="#" data-transition="slide" >Next</a>
+            <div class="errorChk"></div>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+    
+</div>
+
+
+
+<div data-role="page" data-theme="c" id="inPhoto" style="overflow:scroll" >
+    <div data-theme="c" data-role="header" data-position="fixed" >
+    <a data-role="button" onClick="menuClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="menu.png" /></a>
+        <a data-role="button" onclick="backClick();" data-rel="back" class="ui-btn-right" data-transition="slide"><img src="back.png" /></a>
+        <h3>UNICEF</h3>
+  </div>
+    <div data-role="content">       
+       
+        <a data-role="button" id="btn_1_take_pic_pmt" onClick="getAchivementImage1Pmt();" class="ui-btn" >Take Picture  (optional)</a>       
+        <img src="" width="128" height="128" alt="Image" id="pmt_myImageA" />        
+        <input name="pmt_achPhoto" id="pmt_achPhoto" value=""  type="hidden">
+                
+        <input name="pmt_ach_lat" id="pmt_ach_lat" value=""  type="hidden">
+        <input name="pmt_ach_long" id="pmt_ach_long" value=""  type="hidden">
+        <a data-role="button" id="btn_pmt_ach_lat_long" onClick="getLocationInfoAchPmt();" class="ui-btn" >Confirm Location</a>
+        
+		<div class="errorChk" style="color:#F00;"></div>
+        <div class="sucChk" style="color:#00CA00;"></div>
+        <br/>
+		<br/>
+        <a data-role="button" id="btn_pmt_submit" onClick="pmtDataSubmit();" class="ui-btn" >Submit</a> 
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+    </div>
+  </div>
+  
+  
+
+<!-------------------------------------------compliance end----------------------------------------------------->
+
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+
+</body>
+</html>
